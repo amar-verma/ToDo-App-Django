@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo_App</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+    <link rel="stylesheet" href="{% static 'css/Todo.css' %}">
+</head>
+<body>
+    <!-- sidebar start -->
+    <div class="sideNavRow row">
+        <div class="sideNav col-md-1 shadow text-center shadow">
+            <abbr title="Home"><a href="{% url 'home' %}"><i class="icon bi bi-house-door-fill"></i></a></abbr>
+            <hr>
+            <abbr title="Complete"><a href="{% url 'complete' %}"><i class="icon bi bi-check-circle-fill"></i></a></abbr>
+            <hr>
+            <abbr title="Pending"><a href="{% url 'pending' %}"><i class="icon bi bi-x-circle-fill"></i></a></abbr>
+        </div>
+    </div>
+    <!-- sidebar start -->
+
+    <div class="logoutBar row">
+        <div class="col-md-1 my-3 ms-3">
+            <a href="{% url 'ToDo' %}"><button class="btn btn-danger">About</button></a>
+        </div>
+    </div>
+    <script src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>
